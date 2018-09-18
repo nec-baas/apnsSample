@@ -3,7 +3,7 @@
 //
 
 #import "AppDelegate.h"
-#import "nebulaIosSdk/Nebula.h"
+#import <NecBaas/Nebula.h>
 #import "Config.h"
 
 @interface AppDelegate ()

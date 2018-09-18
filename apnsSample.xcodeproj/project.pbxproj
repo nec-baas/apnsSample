@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E01F1881CB752C8005CEDA0 /* nebulaIosSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E01F1871CB752C8005CEDA0 /* nebulaIosSdk.framework */; };
-		3E01F1891CB752C8005CEDA0 /* nebulaIosSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E01F1871CB752C8005CEDA0 /* nebulaIosSdk.framework */; };
 		3E825EF9200C923100FFB28A /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E825EF8200C923100FFB28A /* PushKit.framework */; };
 		3ED926551A01E84700008F2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED926541A01E84700008F2B /* main.m */; };
 		3ED926581A01E84700008F2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED926571A01E84700008F2B /* AppDelegate.m */; };
@@ -17,6 +15,8 @@
 		3ED926601A01E84700008F2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED9265F1A01E84700008F2B /* Images.xcassets */; };
 		3ED926631A01E84700008F2B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED926611A01E84700008F2B /* LaunchScreen.xib */; };
 		3ED9266F1A01E84700008F2B /* apnsSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9266E1A01E84700008F2B /* apnsSampleTests.m */; };
+		4BFBB93FE3970364F5419A18 /* Pods_apnsSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF615EF906D3008DC549615 /* Pods_apnsSample.framework */; };
+		BE27EC0FF68EC4CFD220E8E4 /* Pods_apnsSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1868E4427C062291B4968563 /* Pods_apnsSampleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3E01F1871CB752C8005CEDA0 /* nebulaIosSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nebulaIosSdk.framework; sourceTree = "<group>"; };
+		1868E4427C062291B4968563 /* Pods_apnsSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apnsSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E825EF7200C921100FFB28A /* apnsSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = apnsSample.entitlements; sourceTree = "<group>"; };
 		3E825EF8200C923100FFB28A /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
 		3ED4C29C1A157ED700B86229 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
@@ -47,6 +47,11 @@
 		3ED926681A01E84700008F2B /* apnsSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apnsSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED9266D1A01E84700008F2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3ED9266E1A01E84700008F2B /* apnsSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = apnsSampleTests.m; sourceTree = "<group>"; };
+		5D1EF495121F4F50F269BDA7 /* Pods-apnsSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apnsSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apnsSample/Pods-apnsSample.debug.xcconfig"; sourceTree = "<group>"; };
+		63400BC453FA45BBE17205F6 /* Pods-apnsSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apnsSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-apnsSample/Pods-apnsSample.release.xcconfig"; sourceTree = "<group>"; };
+		DDF615EF906D3008DC549615 /* Pods_apnsSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apnsSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3979E7FEA1E1777B80DB2D /* Pods-apnsSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apnsSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apnsSampleTests/Pods-apnsSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE5BDA80C3F7C255E00772D3 /* Pods-apnsSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apnsSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-apnsSampleTests/Pods-apnsSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E825EF9200C923100FFB28A /* PushKit.framework in Frameworks */,
-				3E01F1881CB752C8005CEDA0 /* nebulaIosSdk.framework in Frameworks */,
+				4BFBB93FE3970364F5419A18 /* Pods_apnsSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E01F1891CB752C8005CEDA0 /* nebulaIosSdk.framework in Frameworks */,
+				BE27EC0FF68EC4CFD220E8E4 /* Pods_apnsSampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				3E825EF8200C923100FFB28A /* PushKit.framework */,
-				3E01F1871CB752C8005CEDA0 /* nebulaIosSdk.framework */,
+				DDF615EF906D3008DC549615 /* Pods_apnsSample.framework */,
+				1868E4427C062291B4968563 /* Pods_apnsSampleTests.framework */,
 			);
 			name = Frameworks;
 			path = frameworks;
@@ -87,6 +93,7 @@
 				3ED9266B1A01E84700008F2B /* apnsSampleTests */,
 				3E01F1861CB75291005CEDA0 /* Frameworks */,
 				3ED926501A01E84700008F2B /* Products */,
+				C364328E71D0F734013E4864 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +149,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C364328E71D0F734013E4864 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D1EF495121F4F50F269BDA7 /* Pods-apnsSample.debug.xcconfig */,
+				63400BC453FA45BBE17205F6 /* Pods-apnsSample.release.xcconfig */,
+				FE3979E7FEA1E1777B80DB2D /* Pods-apnsSampleTests.debug.xcconfig */,
+				FE5BDA80C3F7C255E00772D3 /* Pods-apnsSampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ED926721A01E84700008F2B /* Build configuration list for PBXNativeTarget "apnsSample" */;
 			buildPhases = (
+				6B20C5AF6CC30CBE14BDDDB6 /* [CP] Check Pods Manifest.lock */,
 				3ED9264B1A01E84700008F2B /* Sources */,
 				3ED9264C1A01E84700008F2B /* Frameworks */,
 				3ED9264D1A01E84700008F2B /* Resources */,
+				4D911D2E5F7ADC1FA84F5A0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +186,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ED926751A01E84700008F2B /* Build configuration list for PBXNativeTarget "apnsSampleTests" */;
 			buildPhases = (
+				02D01A1121F5CD6FDC8853D9 /* [CP] Check Pods Manifest.lock */,
 				3ED926641A01E84700008F2B /* Sources */,
 				3ED926651A01E84700008F2B /* Frameworks */,
 				3ED926661A01E84700008F2B /* Resources */,
@@ -244,6 +265,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02D01A1121F5CD6FDC8853D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apnsSampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D911D2E5F7ADC1FA84F5A0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-apnsSample/Pods-apnsSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NecBaas/NecBaas.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NecBaas.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-apnsSample/Pods-apnsSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B20C5AF6CC30CBE14BDDDB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apnsSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3ED9264B1A01E84700008F2B /* Sources */ = {
@@ -397,19 +475,15 @@
 		};
 		3ED926731A01E84700008F2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D1EF495121F4F50F269BDA7 /* Pods-apnsSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = apnsSample/apnsSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/frameworks",
-				);
 				INFOPLIST_FILE = apnsSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nec.ios.nebula.apnsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -418,19 +492,15 @@
 		};
 		3ED926741A01E84700008F2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63400BC453FA45BBE17205F6 /* Pods-apnsSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = apnsSample/apnsSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/frameworks",
-				);
 				INFOPLIST_FILE = apnsSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nec.ios.nebula.apnsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -439,19 +509,19 @@
 		};
 		3ED926761A01E84700008F2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE3979E7FEA1E1777B80DB2D /* Pods-apnsSampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(PROJECT_DIR)/frameworks",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = apnsSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nec.ios.nebula.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/apnsSample.app/apnsSample";
@@ -460,15 +530,15 @@
 		};
 		3ED926771A01E84700008F2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE5BDA80C3F7C255E00772D3 /* Pods-apnsSampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(PROJECT_DIR)/frameworks",
 				);
 				INFOPLIST_FILE = apnsSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nec.ios.nebula.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/apnsSample.app/apnsSample";

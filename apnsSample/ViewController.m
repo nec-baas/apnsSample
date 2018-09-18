@@ -4,7 +4,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
-#import "nebulaIosSdk/Nebula.h"
+#import <NecBaas/Nebula.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *deviceTokenLabel;

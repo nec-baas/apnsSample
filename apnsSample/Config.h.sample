@@ -1,0 +1,19 @@
+//
+//  Config.h
+//  apnstest
+//
+
+// ベースURI
+#define ENDPOINT_URI @"https://api.example.com/api"
+
+// テナントID
+#define TENANT_ID @""
+
+// アプリケーションID
+#define APP_ID @""
+
+// アプリケーションキー
+#define APP_KEY @""
+
+// 通常 Push の場合は false, VoIP Push (PushKit) の場合は true にする
+#define VOIP_PUSH false

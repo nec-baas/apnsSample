@@ -4,6 +4,7 @@
 
 #import "AppDelegate.h"
 #import <NecBaas/Nebula.h>
+#import <UserNotifications/UserNotifications.h>
 #import "Config.h"
 
 @interface AppDelegate ()
@@ -27,9 +28,28 @@ AppDelegate *_theInstance;
     
     if (!VOIP_PUSH) {
         // APNS 用登録処理 (通常 Push)
-        UIUserNotificationType type = UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
-        UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:type categories:nil];
-        [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
+        NSProcessInfo *pi = [NSProcessInfo processInfo];
+        if ([pi isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 0, 0}]) {
+            // iOS 10 以降
+            UNUserNotificationCenter *c = [UNUserNotificationCenter currentNotificationCenter];
+            UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionAlert | UNAuthorizationOptionSound;
+            [c requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                if (error) {
+                    NSLog(@"requestAuthorizationWithOptions error: %@", error);
+                    return;
+                }
+                if (granted) {
+                    dispatch_async(dispatch_get_main_queue(), ^ {
+                        [[UIApplication sharedApplication] registerForRemoteNotifications];
+                    });
+                }
+            }];
+        } else {
+            // iOS 8 - 9
+            UIUserNotificationType type = UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
+            UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:type categories:nil];
+            [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
+        }
     }
     else {
         // PushKit 登録処理

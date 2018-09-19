@@ -122,11 +122,18 @@ AppDelegate *_theInstance;
 
     NSDictionary *aps = userInfo[@"aps"];
     NSString *alert = aps[@"alert"][@"body"];
-    //[self showAlertWithTitle:@"Push received" message:alert];
-    
+
+    [self showLocalNotification:alert];
+
+    // アプリ内の別コンポーネントに通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"didReceivePush" object:self userInfo:aps];
+}
+
+// Local notification 表示
+- (void)showLocalNotification:(NSString *)alert {
     // local 通知すべてキャンセル
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    
+
     // local 通知を出す
     UILocalNotification *n = [UILocalNotification new];
     n.fireDate = [NSDate dateWithTimeIntervalSinceNow:0];
@@ -134,11 +141,8 @@ AppDelegate *_theInstance;
     n.alertBody = alert;
     n.soundName = UILocalNotificationDefaultSoundName;
     n.alertAction = @"OPEN";
-    
+
     [[UIApplication sharedApplication] scheduleLocalNotification:n];
-    
-    // アプリ内の別コンポーネントに通知
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"didReceivePush" object:self userInfo:aps];
 }
 
 // Alert 表示

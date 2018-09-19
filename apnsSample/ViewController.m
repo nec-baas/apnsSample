@@ -42,11 +42,12 @@
 // AlertView 表示
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message
 {
-    [[[UIAlertView alloc] initWithTitle:title
-                                message:message
-                               delegate:nil
-                      cancelButtonTitle:nil
-                      otherButtonTitles:@"Dismiss", nil] show];
+    UIAlertController *ac = [UIAlertController
+            alertControllerWithTitle:title
+                             message:message
+                      preferredStyle:UIAlertControllerStyleAlert];
+    [ac addAction:[UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:ac animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

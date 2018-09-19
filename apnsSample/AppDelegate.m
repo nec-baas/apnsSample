@@ -141,14 +141,18 @@ AppDelegate *_theInstance;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"didReceivePush" object:self userInfo:aps];
 }
 
-// AlertView 表示
+// Alert 表示
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message
 {
-    [[[UIAlertView alloc] initWithTitle:title
-                                message:message
-                               delegate:nil
-                      cancelButtonTitle:nil
-                      otherButtonTitles:@"Dismiss", nil] show];
+    UIAlertController *ac = [UIAlertController
+            alertControllerWithTitle:title
+                             message:message
+                      preferredStyle:UIAlertControllerStyleAlert];
+    [ac addAction:[UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:nil]];
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.window.rootViewController presentViewController:ac animated:YES completion:nil];
+    });
 }
 
 // NSData を hex string に変換

@@ -116,33 +116,16 @@ AppDelegate *_theInstance;
 
 // Push 受信
 - (void)didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    NSDictionary *aps = userInfo[@"aps"];
+    NSString *alert = aps[@"alert"][@"body"];
+
+    NSLog(@"Push received: alert body = %@", alert);
     for (id key in userInfo) {
         NSLog(@"key %@ : value %@", key, userInfo[key]);
     }
 
-    NSDictionary *aps = userInfo[@"aps"];
-    NSString *alert = aps[@"alert"][@"body"];
-
-    [self showLocalNotification:alert];
-
-    // アプリ内の別コンポーネントに通知
+    // ViewController に転送
     [[NSNotificationCenter defaultCenter] postNotificationName:@"didReceivePush" object:self userInfo:aps];
-}
-
-// Local notification 表示
-- (void)showLocalNotification:(NSString *)alert {
-    // local 通知すべてキャンセル
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-
-    // local 通知を出す
-    UILocalNotification *n = [UILocalNotification new];
-    n.fireDate = [NSDate dateWithTimeIntervalSinceNow:0];
-    n.timeZone = [NSTimeZone defaultTimeZone];
-    n.alertBody = alert;
-    n.soundName = UILocalNotificationDefaultSoundName;
-    n.alertAction = @"OPEN";
-
-    [[UIApplication sharedApplication] scheduleLocalNotification:n];
 }
 
 // Alert 表示

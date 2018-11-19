@@ -10,10 +10,18 @@
 #define TENANT_ID @""
 
 // アプリケーションID
-#define APP_ID @""
+#ifdef DEBUG
+#define APP_ID @""  // Development
+#else
+#define APP_ID @""  // Production (AdHoc/AppStore)
+#endif
 
 // アプリケーションキー
-#define APP_KEY @""
+#ifdef DEBUG
+#define APP_KEY @""  // Development
+#else
+#define APP_KEY @""  // Production (AdHoc/AppStore)
+#endif
 
 // 通常 Push の場合は false, VoIP Push (PushKit) の場合は true にする
 #define VOIP_PUSH false
